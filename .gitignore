@@ -26,3 +26,10 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# Posters
+public/posters/
