@@ -1,0 +1,16 @@
+{
+    "server": {
+        "host": "0.0.0.0",
+        "port": 8896
+    },
+    "database": {
+        "host": "localhost",
+        "port": 27017,
+        "name": "otaku-auth",
+        "user": null,
+        "pass": null
+    },
+    "session": {
+        "secret": "M3vt732d4120R574pJPhcEny1sy7Kiz3"
+    }
+}
