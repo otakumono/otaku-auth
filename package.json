@@ -36,28 +36,26 @@
     "otaku-authorizer": "./lib/cli.js"
   },
   "scripts": {
-    "seed": "node ./test/seed.js",
     "prestart": "npm install",
-    "start": "nodemon -x node ./lib/authorizer -e js,json -i \"otaku.*.json\" -i \"test/**.*\"",
+    "start": "nodemon -x node index.js -e js,json -i \"otaku.*.json\" -i \"test/**.*\" -i \"security/**.*\" -i \"(.git*|.tra*|LICENSE*|README*)\" -i \"public/**.*\"",
+    "test": "node test/",
     "test-travis": ""
   },
   "dependencies": {
-    "node-xport": ">= 0.1.1",
-    "otaku-core": "*",
-    "nconf": "0.6.9",
-    "restify": "^2.8.3",
-    "mongoose": "^3.8.12",
-    "mongoose-auto-increment": "^3.0.8",
-    "bcrypt": "~0.8.0",
-    "node-oauth2-server": "~2.2.2",
+    "node-xport": ">= 0.2.0",
+    "otaku-core": "otakumono/otaku-core",
+    "mongoose": "~4.0.1",
+    "bcryptjs": "~2.1.0",
     "commander": "^2.5.0",
-    "forever": "^0.13.0"
+    "forever": "^0.13.0",
+    "restify": "^2.8.3",
+    "browserify": "*",
+    "uglifyify": "*",
+    "browserify-cached": "*"
   },
   "devDependencies": {
     "debug": "~0.7.2",
-    "nodemon": "~1.2.1",
-    "supertest": "~0.14.0",
-    "mocha": "^2.0.1",
-    "should": "^4.1.0"
+    "nodemon": "~1.3.7",
+    "supertest": "~0.14.0"
   }
 }

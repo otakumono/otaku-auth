@@ -1,0 +1,14 @@
+<html>
+	<script src="http://152.7.54.241:9001/package/bcryptjs"></script>
+	<script>
+		function doThing() {
+		var bcrypt = require('bcryptjs');
+		document.write('test\n');
+		var salt = bcrypt.genSaltSync(5);
+		document.write('salt: ' + salt);
+		document.write('hash: ' + bcrypt.hashSync('test', salt));
+		}
+	</script>
+	<body onload="doThing()">
+	</body>
+</html>
